@@ -1,0 +1,443 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Akshar', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* START NAV */
+
+nav{
+    background-color: black;
+    padding: 20px 50px;
+}
+
+.navTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.navItem{
+    margin: auto;
+    padding: 0 0 50px 0;
+}
+
+/* .search{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+}
+
+.searchInput{
+    border: none;
+    background-color: transparent;
+}
+
+.searchInput::placeholder{
+    color: lightgrey;
+}
+
+.limitedOffer{
+    font-size: 20px;
+    border-bottom: 2px solid green;
+} */
+
+.navBottom{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* END NAV */
+
+
+/*  */
+
+.menuItem{
+    margin-right: 50px;
+    cursor: pointer;
+    color: #F5E0D9;
+    font-size: 400;
+}
+
+.slider{
+    overflow: hidden;
+}
+
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+    transition: all 1s ease-in-out;
+}
+
+.sliderItem{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.div{
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    background-color: #B8555D;
+    opacity: 0.5;
+}
+
+.sliderTitle{
+    position: absolute;
+    top: 20%;
+    margin: auto;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.sliderTitle2{
+    position: absolute;
+    color: white;
+    margin: auto;
+    font-size: 100px;
+    font-weight: 1200;
+    text-align: center;
+}
+
+
+.sliderImg{
+    z-index: 0;
+}
+
+.buyButton {
+    position: absolute;
+    top: 70%;
+    right: 50%;
+    margin: auto;
+    font-size: 30px;
+    color: #B8555D;
+    background-color: #F5E0D9;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+.buyButton:hover{
+    background-color: #B8555D;
+    color: white;
+}
+
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featureIcon{
+    font-size: 50px;
+    color: #FF6261;
+}
+
+
+.featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 20px;
+    color: #FF6261;
+}
+
+.featureDesc{
+    color: gray;
+    width: 60%;
+    height: 100px;
+}
+
+
+
+
+
+.product{
+    width: 100%;
+    height: 90vh;
+    background-color: #F5E0D9;
+    position: relative;
+}
+
+
+
+
+
+.payment{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 10px 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 2px 2px 27px 1px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 2px 2px 27px 1px rgba(0,0,0,0.69);
+    -moz-box-shadow: 2px 2px 27px 1px rgba(0,0,0,0.69);
+}
+
+.payTitle{
+    font-size: 20px;
+    color: grey;
+}
+
+.label{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.payInput{
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.payInput::placeholder{
+    color: grey;
+}
+
+.cardIcons{
+    display: flex;
+}
+
+.cardIcon{
+    margin-right: 10px;
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm{
+    width: 30%;
+}
+
+.payButton{
+    position: absolute;
+    height: 40px;
+    bottom: -40px;
+    width: 100%;
+    left: 0;
+    box-shadow: 2px 2px 27px 1px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 2px 2px 27px 1px rgba(0,0,0,0.69);
+    -moz-box-shadow: 2px 2px 27px 1px rgba(0,0,0,0.69);
+    background-color: #FF6261;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+  
+
+.close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #FF6261;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    cursor: pointer;
+}
+
+
+
+
+
+.productImg{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    padding: 30px;
+}
+
+.productPrice{
+    font-size: 40px;
+}
+
+.productDetails{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    padding: 30px;
+}
+
+.productTitle{
+    margin: 0;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.productDesc{
+    font-style: 24px;
+    color: grey;
+}
+
+.colors, .interiors{
+   display: flex;
+   margin-bottom: 20px;
+   
+}
+
+.color{
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background-color: #4B3D46;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color:nth-child(2) {
+    background-color: #B84103;
+}
+
+.color:nth-child(3) {
+    background-color: #FF6261;
+}
+
+
+.inside{
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.productButton{
+    float: left;
+    padding: 10px 20px;
+    background-color: #FF6261;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.productButton:hover{
+    background-color: white;
+    color: black;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 480px) {
+    nav{
+        padding: 20px;
+    }
+
+    .navBottom{
+        flex-wrap: wrap;
+    }
+
+    .menuItem{
+        margin: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .sliderImg{
+        width: 100%;
+    }
+
+    .sliderTitle{
+        display: none;
+    }
+
+    .buyButton{
+        bottom: 0;
+        right: 0;
+        top: unset;
+    }
+
+    .features{
+        flex-direction: column;
+    }
+
+    .product{
+        clip-path: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productImg{
+        width: 80%;
+    }
+
+    .productDetails{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+
+    .productTitle{
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .payment{
+        width: 80%;
+        padding: 20px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
