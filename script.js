@@ -5,10 +5,11 @@ const products = [
     {
       id: 1,
       title: "LOMO CURVO",
-      price: 2000,
+      price: 3000,
+      text: "Ahora podés elegir tus cuadernos y agendas con esta nueva encuadernación. Tamaño a5.",
       colors: [
         {
-          code: "#B8555D",
+          code: "#4B3D46",
           img: "/img/curvo1.jpg",
         },
         {
@@ -26,6 +27,7 @@ const products = [
         id: 2,
         title: "CUADERNOS Y AGENDAS CON TAPAS BORDADAS",
         price: 3000,
+        text: "Tapas bordadas a mano con aguja mágica. Tamaño a5",
         colors: [
           {
             code: "#D0A357",
@@ -45,7 +47,8 @@ const products = [
       {
         id: 3,
         title: "RECETARIOS DE COCINA",
-        price: 2000,
+        price: 2500,
+        text: "Espacio para 200 recetas y guía de medidas. Tamaño a5.",
         colors: [
           {
             code: "#50698E",
@@ -68,6 +71,7 @@ const products = [
         id: 4,
         title: "ANOTADORES POCKET",
         price: 1500,
+        text: "Estos anotadores son mini. Los podés llevar todos lados y no ocupan nada de lugar.",
         colors: [
           {
             code: "#0B91E4",
@@ -86,19 +90,20 @@ const products = [
       
       {
         id: 4,
-        title: "ÁLBUMES",
+        title: "ÁLBUMES DE FOTOS",
         price: 3000,
+        text: "Álbum de fotos con papel de colores, compensaciones y separacodres para proteger tus fotos.",
         colors: [
           {
-            code: "Gryffindor",
+            code: "#646F75",
             img: "/img/album1.jpg",
           },
           {
-            code: "Hufflepuff",
+            code: "#AE061B",
             img: "/img/album2.jpg",
           },
           {
-              code: "Ravenclaw",
+              code: "#4E558F",
               img: "/img/album3.jpg",
             },
         ],
@@ -111,20 +116,18 @@ let choosenProduct = products [0]
 const currentProductImg = document.querySelector(".productImg");
 const currentProductTitle = document.querySelector(".productTitle");
 const currentProductPrice = document.querySelector(".productPrice");
+const currentproducDesc = document.querySelector(".producDesc");
 const currentProductColors = document.querySelectorAll(".color");
 const currentProductInside= document.querySelectorAll(".inside");
 
 menuItems.forEach((item,index) => {
     item.addEventListener("click", () => {
-        // cambia la slider
+      
         wrapper.style.transform = `translateX(${-100 * index}vw)`;
-
-
-        // cambia al elegir el producto
 
         choosenProduct = products [index]
 
-    // cambiar text 
+    currentproducDesc.textContent = choosenProduct.text;
 
     currentProductTitle.textContent = choosenProduct.title;
 
@@ -150,10 +153,10 @@ currentProductColors.forEach((color, index) => {
     inside.addEventListener("click", () => {
       currentProductInside.forEach((inside) => {
         inside.style.backgroundColor = "white";
-        inside.style.color = "black";
+        inside.style.color = "#FF6261";
       });
-      inside.style.backgroundColor = "black";
-      inside.style.color = "white";
+      inside.style.backgroundColor = "#0a141d";
+      inside.style.color = "#FF6261";
     });
   });
 
@@ -169,6 +172,21 @@ currentProductColors.forEach((color, index) => {
   close.addEventListener("click", () => {
     payment.style.display = "none";
   });
+
+
+  const payButton = document.querySelector(".payButton");
+  const payend = document.querySelector(".end");
+  const end = document.querySelector(".end");
+
+  payButton.addEventListener("click", () => {
+    payend.style.display = "flex";
+  });
+  
+  end.addEventListener("click", () => {
+    payend.style.display = "none";
+  });
+
+
   
   
 
